@@ -16,10 +16,19 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="container">
 		<slot />
+
+
+    <script>
+             onload = () => {
+        document.body.classList.remove("container");
+      };
+    </script>
 	</body>
 </html>
+
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
